@@ -31,4 +31,18 @@ public class Calculadora
             index++;
         }        
     }
+    
+    /**
+     * Imprime por pantalla la suma de los números comprendidos entre el 0 y el 10 (ambos incluidos)
+     */
+    public void sumValues()
+    {
+        int index = 0;
+        int suma = 0;
+        while (index <= 10) {
+            suma = index + suma;
+            index++;
+        }
+        System.out.println("La suma de los numeros entre 0 y 10 es: " + suma);
+    }
 }
