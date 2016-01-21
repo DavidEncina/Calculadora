@@ -45,4 +45,32 @@ public class Calculadora
         }
         System.out.println("La suma de los numeros entre 0 y 10 es: " + suma);
     }
+    
+    /**
+     * Se piden dos parámetros enteros a y b y devuelva la suma de los valores comprendidos entre dichos parámetros (ambos incluidos)
+     * En caso de que b sea menor que a, el programa debe intercambiarlos.
+     */
+    public int sumValuesInterval(int a, int b)
+    {
+        int suma = 0;
+        int numMayor = a;
+        int numMenor = b;        
+        if (b > a) {
+            numMayor = b;
+            numMenor = a;
+        }
+        int index = numMenor;
+        while (index <= numMayor) {
+            suma = index + suma;
+            index++;
+        }
+        if (numMayor == numMenor) {
+            suma = numMayor;
+        }
+        if (numMayor < 0 || numMenor < 0) {
+            System.out.println("Los dos numeros introducidos deben ser 0 o mayores que 0");
+            suma = -1;
+        }
+        return suma;
+    }
 }
