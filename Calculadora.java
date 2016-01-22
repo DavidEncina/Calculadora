@@ -100,4 +100,25 @@ public class Calculadora
         }
         return isPrime;
     }
+    
+    /**
+     * Multiplica dos numeros enteros.
+     * Si alguno de ellos es negativo te avisa de ello y da -1
+     */
+    public int multiplicarEnterosPositivos(int num1, int num2)
+    {
+        int index = 0;
+        int suma = 0;
+        if (num1 >= 0 && num2 >= 0) {
+            while (index < num2) {
+                suma = suma + num1;
+                index++;
+            }
+        }
+        else {
+            suma = -1;
+            System.out.println("Los dos numeros introducidos deben ser 0 o mayores que 0");
+        }
+        return suma;
+    }
 }
