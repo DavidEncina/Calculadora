@@ -88,13 +88,13 @@ public class Calculadora
      */
     public boolean isPrime(int n)
     {
-        int index = 1;
-        //Doy por supuesto que n no es primo
-        boolean isPrime = false;        
+        int index = 2;
+        //Doy por supuesto que n es primo
+        boolean isPrime = true;        
         //El bucle se detendra al llegar n -1. Ya que este no hace falta comprobarlo
         while (index < n) {
-            if ((n / index) != 0){
-                isPrime = true;
+            if ((n % index) == 0){
+                isPrime = false;
             }
             index++;
         }
